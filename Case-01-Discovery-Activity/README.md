@@ -31,6 +31,23 @@ Determine:
 
 ---
 
+# Observed Activity Summary
+
+| Technique                              | ID        | Status                    | Evidence                             |
+| -------------------------------------- | --------- | ------------------------- | ------------------------------------ |
+| PowerShell                             | T1059.001 | Confirmed                 | PowerShell commands                  |
+| System Owner/User Discovery            | T1033     | Confirmed                 | whoami, whoami /priv, whoami /groups |
+| Account Discovery                      | T1087     | Confirmed                 | net user, Get-LocalUser              |
+| System Information Discovery           | T1082     | Confirmed                 | systeminfo, WMIC                     |
+| System Network Configuration Discovery | T1016     | Confirmed                 | ipconfig, hostname, arp              |
+| System Network Connections Discovery   | T1049     | Confirmed                 | netstat -ano                         |
+| Software Discovery                     | T1518     | Potential                 | sc query windefend                   |
+| Remote Services                        | T1021     | Potential / Not Confirmed | Remote execution telemetry           |
+| Ingress Tool Transfer                  | T1105     | Confirmed Behavior        | Invoke-WebRequest                    |
+| Security Control Discovery             | —         | Observed                  | sc query windefend, netsh firewall   |
+
+---
+
 ## Final Classification
 
 Benign True Positive
