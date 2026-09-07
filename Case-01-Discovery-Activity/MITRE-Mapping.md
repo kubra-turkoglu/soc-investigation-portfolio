@@ -23,7 +23,7 @@ Where the available evidence was insufficient to confidently identify a specific
 ```text
 powershell wmic os get caption
 powershell -c get-localuser
-powershell -c Invoke-WebRequest -Uri "https://secure.eicar.org/eicar.com.txt" -OutFile "$env:USERPROFILE\Downloads\eicar_test.txt"
+powershell -c Invoke-WebRequest -Uri "hxxps[://]secure[.]eicar[.]org/eicar[.]com[.]txt" -OutFile "$env:USERPROFILE\Downloads\eicar_test.txt"
 powershell -c 'X5O!P%@AP[4\PZX54(P)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'
 ```
 
