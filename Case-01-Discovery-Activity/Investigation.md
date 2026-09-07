@@ -115,7 +115,7 @@ Determine Defender and Firewall status.
 
 PowerShell executed:
 
-Invoke-WebRequest -Uri https://secure.eicar.org/eicar.com.txt
+Invoke-WebRequest -Uri hxxps[://]secure[.]eicar[.]org/eicar[.]com[.]txt
 
 Purpose:
 
