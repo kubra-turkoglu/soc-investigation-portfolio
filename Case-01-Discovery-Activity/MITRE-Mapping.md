@@ -1,63 +1,95 @@
 # MITRE ATT&CK Mapping
 
-## Account Discovery
+## TA0007 - Discovery
 
-Technique:
-T1087
+### T1033
+
+System Owner/User Discovery
+
+Evidence:
+
+* whoami
+* whoami /priv
+* whoami /groups
+
+### T1087
+
+Account Discovery
 
 Evidence:
 
 * net user
 * get-localuser
 
-## System Owner/User Discovery
+### T1082
 
-Technique:
-T1033
-
-Evidence:
-
-* whoami
-* whoami /groups
-* whoami /priv
-
-## System Information Discovery
-
-Technique:
-T1082
+System Information Discovery
 
 Evidence:
 
 * systeminfo
 * wmic os get caption
 
-## Network Configuration Discovery
+### T1016
 
-Technique:
-T1016
+System Network Configuration Discovery
 
 Evidence:
 
 * ipconfig
 * ipconfig /all
 
-## Network Service Discovery
+### T1049
 
-Technique:
-T1046
+System Network Connections Discovery
 
 Evidence:
 
-* arp -a
 * netstat -ano
 
-## Software Discovery
+### T1518
 
-Technique:
-T1518
+Software Discovery
 
 Evidence:
 
 * sc query windefend
-* netsh firewall show state
 
+### T1016.001
+
+Network Configuration Discovery
+
+Evidence:
+
+* arp -a
+* hostname
+
+---
+
+## TA0002 - Execution
+
+### T1059.001
+
+PowerShell
+
+Evidence:
+
+Invoke-WebRequest
+
+powershell -c get-localuser
+
+powershell wmic os get caption
+
+---
+
+## TA0005 - Defense Evasion / Security Validation
+
+Observed:
+
+* Defender status checks
+* Firewall status checks
+* EICAR validation activity
+
+Analyst Note:
+
+Activity was confirmed as authorized security testing.
